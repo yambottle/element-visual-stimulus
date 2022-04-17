@@ -1,7 +1,10 @@
-# djcat-visual-stimuli
-The `stimulus` schema is a self-contained application that generates and presents visual stimuli using PsychToolbox and records conditions and trials in a DataJoint database.
+# DataJoint Element - Visual Stimulus
+The `stimulus` schema is a self-contained application that generates and presents visual stimuli using [PsychToolbox](http://psychtoolbox.org) and records conditions and trials in a DataJoint database.
 
-# Run in MATLAB 
++ See the [Element Visual Stimulus documentation](https://elements.datajoint.org/description/visual_stimulus/) for the background information and development timeline.
+
++ For more information on the DataJoint Elements project, please visit https://elements.datajoint.org.  This work is supported by the National Institutes of Health.
+
 *Requirements:* Some of the stimuli require MATLAB R2016b+. 
 
 Although the following steps steps can be executed manually, they are typically automated and thus serve as the application interface for the experiment control software.
