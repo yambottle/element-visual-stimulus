@@ -1,5 +1,5 @@
 # DataJoint Element - Visual Stimulus
-+ The `stimulus` schema is a self-contained application that generates and presents visual stimuli using [PsychToolbox](http://psychtoolbox.org) and records conditions and trials in a DataJoint database.
++ The `stimulus` schema is a self-contained application that generates and presents visual stimuli using [Psychtoolbox](http://psychtoolbox.org) and records conditions and trials in a DataJoint database.
 
 + See the [Element Visual Stimulus documentation](https://elements.datajoint.org/description/visual_stimulus/) for the background information and development timeline.
 
