@@ -4,7 +4,7 @@ control = stimulus.getControl;
 control.clearAll   % clear trial queue and cached conditions.
 
 cond.rng_seed = 1:4;
-cond.duration = 30;   % (s) trial duration
+cond.duration = 16;   % (s) trial duration
 cond.tex_ydim = 90;  %
 cond.tex_xdim = 160;  %
 cond.screen_height = 85;  % degrees
