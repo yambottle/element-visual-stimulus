@@ -1,4 +1,4 @@
-# djcat-visual-stimuli
+# Element Visual Stimulus
 The `stimulus` schema is a self-contained application that generates and presents visual stimuli using PsychToolbox and records conditions and trials in a DataJoint database.
 
 # Run in MATLAB 

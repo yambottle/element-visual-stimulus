@@ -14,7 +14,7 @@ params = struct(...
     'aperture_x', [-0.40 0.40], ...  aperture x coordinate, in units of half-diagonal, 0 = center
     'aperture_y', [-0.32 0.32], ... aperture y coordinate, in units of half-diagonal, 0 = center
     'init_phase', 0 ... 0..1
-);
+     );
 
 % generate conditions
 assert(isscalar(params))
