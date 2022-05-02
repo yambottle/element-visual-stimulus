@@ -89,11 +89,9 @@ f.stimulus.close(nargout=0)  # close the stimulus screen
 <details>
 <summary>Click to expand details</summary>
 
-The diagram below depicts the entire stimulus schema. 
+The schema diagram below depicts the stimulus schema. 
 ![](erd.png)
 
-The following diagram shows the core of the schema for a subset of stimulus types: 
-![](core-erd.png)
 
 #### `stimulus.Condition`
 The central table is `stimulus.Condition`, which enumerates all possible stimulus conditions to be presented. 
