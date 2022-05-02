@@ -52,7 +52,6 @@ classdef Trippy < stimulus.core.Visual & dj.Manual
             fps = self.screen.fps;  % must be 60 
             assert(fps==60, 'Frame rate must be 60')
             self.screen.frameStep = cond.frame_downsample;
-            cond = self.prepare(cond);
             for frame=1:size(cond.movie, 3)
                 % if self.screen.escape, break, end
                 tex = Screen('MakeTexture', self.win, cond.movie(:, :, frame));
