@@ -6,6 +6,9 @@
 
 + For more information on the DataJoint Elements project, please visit https://elements.datajoint.org.  This work is supported by the National Institutes of Health.
 
+# Video Tutorial
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/dtEggZX9Fw4/0.jpg)](https://www.youtube.com/watch?v=dtEggZX9Fw4)
+
 ## Run in MATLAB
 
 <details>
@@ -187,30 +190,25 @@ monetScans = experiment.Scan() & (stimulus.Trial() * stimulus.Condition() & 'sti
 
 ```python
 # python
-scan_key = dict(animal_id=7302, session=1, scan_idx=3)
-scan_conditions = stimulus.Condition() & (stimulus.Trial() & scan_key)
+session_key = dict(session=7302)
+scan_conditions = stimulus.Condition() & (stimulus.Trial() & session_key)
 ```
 
 ```matlab
 % matlab
-scanKey = struct('animal_id', 7302, 'session', 1, 'scan_idx', 3);
-scanConditions = stimulus.Condition & (stimulus.Trial & scanKey);
+sessionKey = struct('session', 7302, 'session', 1, 'scan_idx', 3);
+scanConditions = stimulus.Condition & (stimulus.Trial & sessionKey);
 ```
 
-
-#### All stimuli types shown during a given scan
-```python
-# python
-scanKey = dict(animal_id=7302, session=1, scan_idx=3)
-scan_stimuli = dj.U('stimulus_type') & (dj.Condition() * dj.Trial() & scanKey)
-```
 </details>
 
 ## Designing configurations
-TODO
+<details>
+</details>
 
 ## Designing new stimuli
-TODO
+<details>
+</details> 
 
 ## Citation
 
