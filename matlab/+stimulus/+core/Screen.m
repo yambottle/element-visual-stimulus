@@ -44,9 +44,10 @@ classdef Screen < handle
                 AssertOpenGL
                 sca
                 % pix screen with the largest screen number
-                screen = max(Screen('Screens'));
-                [self.win, self.rect] = Screen('OpenWindow',screen,127,[],[],[],[],[], ...
-                    mor(kPsychNeedFastBackingStore,kPsychNeed16BPCFloat));
+                screen = 0; % max(Screen('Screens'));
+                [self.win, self.rect] = Screen('OpenWindow', screen, 127, ...
+                    [0, 0, 800, 600] ,[],[],[],[], ...
+                    mor(kPsychNeedFastBackingStore, kPsychNeed16BPCFloat));
                 AssertGLSL
                 fprintf 'Screen Rectangle:'
                 disp(self.rect)

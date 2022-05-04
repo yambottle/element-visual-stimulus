@@ -6,7 +6,7 @@ classdef Control < handle
         control = stimulus.core.Control  % singleton for everyone's use
         screen = stimulus.core.Visual.screen
         hashLength = 20
-        flipKeyAttributes = {'animal_id'}  % the attributes of the primary key for which the flips are kept unique
+        flipKeyAttributes = {'session'}  % the attributes of the primary key for which the flips are kept unique
     end
     
     properties(SetAccess=protected)
@@ -112,7 +112,7 @@ classdef Control < handle
             self.screen.close
         end
         
-        function run(self, scanKey)
+        function run(self, sessionKey)
             % play the trials on the trialQueue
             
             % set up clean up
@@ -127,13 +127,13 @@ classdef Control < handle
             PsychPortAudio('Volume',audioHandle,2);
             
             % initialize trialId
-            trialId = fetch1(self.trialTable & scanKey, 'max(trial_idx) -> n')+1;
+            trialId = fetch1(self.trialTable & sessionKey, 'max(trial_idx) -> n')+1;
             if isnan(trialId)
                 trialId = 0;
             end
             
             % initialize flip count
-            flip = fetch1(self.trialTable & dj.struct.pro(scanKey, self.flipKeyAttributes{:}), 'max(last_flip) -> n')+1;
+            flip = fetch1(self.trialTable & sessionKey, 'max(last_flip) -> n')+1;
             if isnan(flip)
                 flip = 0;
             end
@@ -154,7 +154,7 @@ classdef Control < handle
                 condition.obj___.showTrial(condition)
                 
                 % save trial
-                trialRecord = scanKey;
+                trialRecord = sessionKey;
                 trialRecord.trial_idx = trialId;
                 trialRecord.condition_hash = condition.condition_hash;
                 trialRecord.flip_times = self.screen.clearFlipTimes();

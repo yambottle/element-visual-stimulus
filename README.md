@@ -1,9 +1,13 @@
+
 # DataJoint Element - Visual Stimulus
 + The `stimulus` schema is a self-contained application that generates and presents visual stimuli using [Psychtoolbox](http://psychtoolbox.org) and records conditions and trials in a DataJoint database.
 
 + See the [Element Visual Stimulus documentation](https://elements.datajoint.org/description/visual_stimulus/) for the background information and development timeline.
 
 + For more information on the DataJoint Elements project, please visit https://elements.datajoint.org.  This work is supported by the National Institutes of Health.
+
+# Video Tutorial
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/dtEggZX9Fw4/0.jpg)](https://www.youtube.com/watch?v=dtEggZX9Fw4)
 
 ## Run in MATLAB
 
@@ -88,11 +92,9 @@ f.stimulus.close(nargout=0)  # close the stimulus screen
 <details>
 <summary>Click to expand details</summary>
 
-The diagram below depicts the entire stimulus schema. 
+The schema diagram below depicts the stimulus schema. 
 ![](erd.png)
 
-The following diagram shows the core of the schema for a subset of stimulus types: 
-![](core-erd.png)
 
 #### `stimulus.Condition`
 The central table is `stimulus.Condition`, which enumerates all possible stimulus conditions to be presented. 
@@ -188,30 +190,25 @@ monetScans = experiment.Scan() & (stimulus.Trial() * stimulus.Condition() & 'sti
 
 ```python
 # python
-scan_key = dict(animal_id=7302, session=1, scan_idx=3)
-scan_conditions = stimulus.Condition() & (stimulus.Trial() & scan_key)
+session_key = dict(session=7302)
+scan_conditions = stimulus.Condition() & (stimulus.Trial() & session_key)
 ```
 
 ```matlab
 % matlab
-scanKey = struct('animal_id', 7302, 'session', 1, 'scan_idx', 3);
-scanConditions = stimulus.Condition & (stimulus.Trial & scanKey);
+sessionKey = struct('session', 7302, 'session', 1, 'scan_idx', 3);
+scanConditions = stimulus.Condition & (stimulus.Trial & sessionKey);
 ```
 
-
-#### All stimuli types shown during a given scan
-```python
-# python
-scanKey = dict(animal_id=7302, session=1, scan_idx=3)
-scan_stimuli = dj.U('stimulus_type') & (dj.Condition() * dj.Trial() & scanKey)
-```
 </details>
 
 ## Designing configurations
-TODO
+<details>
+</details>
 
 ## Designing new stimuli
-TODO
+<details>
+</details> 
 
 ## Citation
 
