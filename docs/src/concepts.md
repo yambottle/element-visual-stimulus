@@ -47,10 +47,10 @@ specific to a single stimulus condition of the type `Monet2`. For each tuple in
 corresponding entry. The name of the specialization table is indicated in each row of
 `stimulus.Condition` in field `stimulus_type`. 
 
-A preview of the `stimulus.Condition`:
+Example data:
 
 |CONDITION_HASH      |stimulus_type   |stimulus_version|
-| ---                | ---            | ---            |
+| -----------------  | -------------- | -------------- |
 |+9mOEvwZHyV2MiwRBsMy|stimulus.Varma  |1               |
 |+eFINMa+jF58wHzuk9qQ|stimulus.Monet  |1               |
 |+0cObnxIHpoB5RKZJVYj|stimulus.Matisse|1               |
@@ -63,6 +63,8 @@ The table `stimulus.Trial` contains the information about the presentation of a
 condition during a specific scan (from `experiment.Scan`).  Any number of conditions of
 any type can be presented during a scan and each condition may be displayed multiple
 times.
+
+Example data:
 
 |ANIMAL_ID|SESSION|SCAN_IDX|TRIAL_IDX|condition_hash  |last_flip|trial_ts   |flip_times|
 | ---     | ---   | ---| ---     | ---                | ---     | ---       | ---      |
