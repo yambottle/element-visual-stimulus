@@ -84,6 +84,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 plugins:
+  - markdownextradata: {}
   - search
   # - redirects: # OPTIONAL REDIRECTS
   #     redirect_maps:
@@ -117,6 +118,7 @@ markdown_extensions:
   - pymdownx.snippets
   
 extra:
+  PATCH_VERSION: !ENV PATCH_VERSION
   generator: false # Disable watermark
   analytics:
     provider: google
