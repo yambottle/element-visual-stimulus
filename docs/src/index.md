@@ -15,5 +15,3 @@ screen.
 Visit the [Concepts page](./concepts.md) for more information on stimulus presentation.
 To get started with building your data pipeline visit the 
 [Tutorials page](./tutorials.md).
-
-![element-visual-stimulus diagram](./images/diagram_visual_stimulus.png)
