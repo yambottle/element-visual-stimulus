@@ -116,7 +116,8 @@ markdown_extensions:
       linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  
+  - pymdownx.tasklist: # Renders check boxes in tasks lists
+    custom_checkbox: true
 extra:
   PATCH_VERSION: !ENV PATCH_VERSION
   generator: false # Disable watermark
