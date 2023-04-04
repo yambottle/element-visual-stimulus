@@ -6,12 +6,18 @@ experiments. Each Element is a modular pipeline for data storage and processing 
 corresponding database tables that can be combined with other Elements to assemble a
 fully functional pipeline.
 
-![diagram](https://raw.githubusercontent.com/datajoint/element-visual-stimulus/main/images/diagram_flowchart.svg)
+## Experiment flowchart
 
-Element Visual Stimulus runs Psychtoolbox to procedurally generate visual stimuli as
-well as provide synchronization information to a diode positioned in the corner of the
-screen.
+![flowchart](https://raw.githubusercontent.com/datajoint/element-visual-stimulus/main/images/flowchart.svg)
 
-Visit the [Concepts page](./concepts.md) for more information on stimulus presentation.
-To get started with building your data pipeline visit the 
-[Tutorials page](./tutorials.md).
+## Data pipeline
+
+![pipeline](https://raw.githubusercontent.com/datajoint/element-visual-stimulus/main/images/pipeline.png)
+
+## Getting started
+
++ [Concepts page](./concepts.md) - Information on stimulus presentation and Element Visual Stimulus
+
++ [Tutorials page](./tutorials.md) - Start building your data pipeline
+
++ [Code repository](https://github.com/datajoint/element-visual-stimulus)
