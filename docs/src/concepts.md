@@ -12,7 +12,7 @@ displayed. Even still, there may be dropped frames.
 
 Alternatively, one can allow for the above sources of variation, but instead record the
 outcome and piece together timing after the fact. The Element takes this approach by
-dedicating a corer of the screen to displaying a unique sequence. When captured by a
+dedicating a corner of the screen to displaying a unique sequence. When captured by a
 photosensitive diode and decoded, this sequence provides the exact timing for each frame
 of the stimulus regardless of dropped frames or real-time operating system inaccuracies.
 
