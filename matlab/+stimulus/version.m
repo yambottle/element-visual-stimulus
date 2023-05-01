@@ -1,7 +1,7 @@
 function varargout = version
     % report Element Visual Stimulus version
     
-    v = struct('major', 0, 'minor', 0, 'patch', 1);
+    v = struct('major', 0, 'minor', 1, 'patch', 0);
     
     if nargout
         varargout{1}=v;

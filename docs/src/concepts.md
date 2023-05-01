@@ -1,6 +1,6 @@
 # Concepts
 
-## Stimulus Synchronisation in Neurophysiology
+## Stimulus Synchronization in Neurophysiology
 
 Researchers focused on sensation and perception in neuroscience often need high temporal
 precision in when images or videos are rendered, beyond the abilities of most
@@ -12,29 +12,37 @@ displayed. Even still, there may be dropped frames.
 
 Alternatively, one can allow for the above sources of variation, but instead record the
 outcome and piece together timing after the fact. The Element takes this approach by
-dedicating a corer of the screen to displaying a unique sequence. When captured by a
+dedicating a corner of the screen to displaying a unique sequence. When captured by a
 photosensitive diode and decoded, this sequence provides the exact timing for each frame
-of the stimulus regardless of dropped frames or real-time operating system inaccuracies. 
+of the stimulus regardless of dropped frames or real-time operating system inaccuracies.
 
-<!-- 
 ## Key Partnerships
--->
 
-## Element Features
++ Andreas Tolias Lab (Baylor College of Medicine)
 
-This Element is is a self-contained application that generates and presents visual
-stimuli using [Psychtoolbox](http://psychtoolbox.org), as well as records conditions and
-trials in a DataJoint database. The user can set parameters related to the display of
-gratings, dots, or 'trippy' (i.e., black and white psychedelic gradient) stimuli. During
-presentation, the corner of the screen is reserved for displaying a unique sequence to a
-photosensitive diode, which provides the exact timing for each frame of the stimulus.
+## Element Roadmap
 
-While Element Visual stimulus is MATLAB-native, the resulting data can be retrieved in
-Python as part of a larger workflow. For information on running MATLAB scripts with 
-Python, see 
-[MathWorks documentation](https://www.mathworks.com/help/matlab/matlab-engine-for-python.html).
+Element Visual Stimulus is a self-contained application that generates and presents 
+visual stimuli using [Psychtoolbox](http://psychtoolbox.org), as well as records 
+conditions and trials in a DataJoint database. Further development of this Element is 
+community driven. Upon user requests and based on guidance from the Scientific Steering 
+Group we will continue adding features to this Element.
+
+- [x] Set parameters related to the display of gratings, dots, or 'trippy' (i.e. black and white psychedelic gradient) stimuli.
+
+- [x] During presentation, the corner of the screen is reserved for displaying a photodiode, which provides the exact timing for each frame of the stimulus.
+
+- [x] While Element Visual stimulus is MATLAB-native, the resulting data can be 
+retrieved in Python as part of a larger workflow. For information on running MATLAB 
+scripts with Python, see [MathWorks documentation](https://www.mathworks.com/help/matlab/matlab-engine-for-python.html).
+
+- [ ] Integration with [Element Event](https://datajoint.com/docs/elements/element-event)
 
 ## Element Architecture
+
+Each of the DataJoint Elements creates a set of tables for common neuroscience data modalities to organize, preprocess, and analyze data. Each node in the following diagram is a table within the Element or a table connected to the Element.
+
+![pipeline](https://raw.githubusercontent.com/datajoint/element-visual-stimulus/main/images/pipeline.png)
 
 ### Condition
 
@@ -71,10 +79,3 @@ Example data:
 |0        |0      |0       |0    |Qjz5gJN2igKvsonApHO1|21322|2022-04-21 16:23:40|=BLOB=|
 |0        |0      |0       |1    |KMk2le1nd79vP4uhW+lG|21324|2022-04-21 16:23:42|=BLOB=|
 |0        |0      |0       |2    |d3TMSkOO74Y2QzRngY9r|21325|2022-04-21 16:23:43|=BLOB=|
-
-## Roadmap
-
-Further development of this Element is community driven.  Upon user requests and based on guidance from the Scientific Steering Group we will add the following features to this Element:
-
-- Integration with [Element Event](https://datajoint.com/docs/elements/element-event)
-- Support for other stimulus presentation software
