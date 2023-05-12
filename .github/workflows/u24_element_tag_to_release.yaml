@@ -10,5 +10,5 @@ jobs:
   call_mkdocs_release:
     uses: yambottle/datajoint.github/.github/workflows/mkdocs_release.yaml@main
     secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      UPSTREAM_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
