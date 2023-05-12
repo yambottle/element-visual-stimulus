@@ -8,7 +8,7 @@ jobs:
   call_context_check:
     uses: dj-sciops/djsciops-cicd/.github/workflows/context_check.yaml@main
   call_mkdocs_release:
-    uses: yambottle/datajoint.github/.github/workflows/mkdocs_release.yaml@main
+    uses: datajoint/.github/.github/workflows/mkdocs_release.yaml@main
     permissions: 
       contents: write
 
