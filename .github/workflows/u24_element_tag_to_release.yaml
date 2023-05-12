@@ -9,8 +9,5 @@ jobs:
     uses: dj-sciops/djsciops-cicd/.github/workflows/context_check.yaml@main
   call_mkdocs_release:
     uses: yambottle/datajoint.github/.github/workflows/mkdocs_release.yaml@main
-    permissions:
-      contents: write
-    secrets:
-      UPSTREAM_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    permissions: write-all
 
